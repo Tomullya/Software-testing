@@ -35,8 +35,23 @@ $ ls
 15) Найти файл по имени==find  -type f -name work1.txt
 16) просмотреть содержимое в реальном времени==tail -f work1.txt
  (команда grep) изучите как она работает==grep 'doing' work1.txt
+ 
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ grep 'doing' work1.txt
+I am doing my homework now.
+ 
 17) вывести несколько первых строк из текстового файла==head -n2 work1.txt
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ head -n2 work1.txt
+I am doing my homework now.
+It is so exciting and interesting.
+
+
 18) вывести несколько последних строк из текстового файла==tail -1 work1.txt
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ tail -1 work1.txt
+ffff
+
 19) просмотреть содержимое длинного файла (команда less) изучите как она работает.==less work1.txt
 20) вывести дату и время==date
 =========
