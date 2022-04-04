@@ -1,0 +1,104 @@
+1) Посмотреть где я==pwd
+2) Создать папку==mkdir Homework
+3) Зайти в папку==cd Homework
+
+4) Создать 3 папки==mkdir {1,2,3}
+5) Зайти в любоую папку==cd 1
+6) Создать 5 файлов (3 txt, 2 json)==touch work1.txt work2.txt work3.txt home1.json home2.json
+7) Создать 3 папки==mkdir item1 item2 item3
+8. Вывести список содержимого папки==ls 
+9) + Открыть любой txt файл==vim work1.txt
+10) + написать туда что-нибудь, любой текст==i I am doing my homework now.
+11) + сохранить и выйти.==esc:wq
+12) Выйти из папки на уровень выше==cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.==mv work1.txt work2.txt ../
+pwd
+/c/Users/Евгений/homework/2
+Евгений@HOME-PC MINGW64 ~/homework/2
+$ ls
+work1.txt  work2.txt
+Евгений@HOME-PC MINGW64 ~/homework/2
+$ mv work1.txt work2.txt ../
+Евгений@HOME-PC MINGW64 ~/homework/2
+$ ls
+Евгений@HOME-PC MINGW64 ~/homework/2
+$ pwd
+/c/Users/Евгений/homework/2
+Евгений@HOME-PC MINGW64 ~/homework/2
+$ cd ..
+Евгений@HOME-PC MINGW64 ~/homework
+$ ls
+1/  2/  3/  A/  B/  C/  group_27/  work1.txt  work2.txt
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.==cp work1.txt work2.txt C:/Users/Евгений/Homework/1/item2
+15) Найти файл по имени==find  -type f -name work1.txt
+16) просмотреть содержимое в реальном времени==tail -f work1.txt
+ (команда grep) изучите как она работает==grep 'doing' work1.txt
+ 
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ grep 'doing' work1.txt
+I am doing my homework now.
+ 
+17) вывести несколько первых строк из текстового файла==head -n2 work1.txt
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ head -n2 work1.txt
+I am doing my homework now.
+It is so exciting and interesting.
+
+
+18) вывести несколько последних строк из текстового файла==tail -1 work1.txt
+Евгений@HOME-PC MINGW64 ~/Homework/1/item1
+$ tail -1 work1.txt
+ffff
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.==less work1.txt
+20) вывести дату и время==date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request== curl http://162.55.220.72:5005/terminal-hw-request
+
+Response:
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0   2245      0 --:--:-- --:--:-- --:--:--  2257
+{"Intro":"Hello!! This is your the first response from server","Tasks":
+{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+
+Next step send ==curl "http://162.55.220.72:5005/get_method?name="Tamara"&age=31"
+
+
+Response : [1] 172
+[2] 173
+curl: (3) URL using bad/illegal format or missing URL
+[1]-  Exit 3                  curl "http://162.55.220.72:5005/get_method?name="Tamara"&age=31
+
+curl "http://162.55.220.72:5005/get_method?name="Tamara"
+[2]+  Done                    age=31"
+curl "http://162.55.220.72:5005/get_method?name="Tamara"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    16  100    16    0     0    150      0 --:--:-- --:--:-- --:--:--   152["Tamara","31"]
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch script.txt
+vim script
+i
+#!/bin/bash=указываем, какую оболочку используем
+#this is a comment
+cd Homework
+mkdir {A,B,C}
+cd A
+touch w1.txt w2.txt w3.txt h1.json h2.json
+mkdir item11 item22 item33
+ls
+mv w1.txt w2.txt item11
+Esc :wq
+chmod +x ./script=делаем скрип исполняемым
+
+./script=запускаем скрипт
+
